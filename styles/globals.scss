@@ -1,26 +1,336 @@
-html,
+// =================================================================================
+// 1. FUNCTIONS & INITIAL VARIABLES
+// ---------------------------------------------------------------------------------
+@import "bootstrap/scss/functions";
+// ---------------------------------------------------------------------------------
+// A) Colors
+// ---------------------------------------------------------------------------------
+$gray: #808080;
+$white: tint-color($gray, 90%);
+$gray-100: tint-color($gray, 80%);
+$gray-150: tint-color($gray, 70%);
+$gray-200: tint-color($gray, 60%);
+$gray-250: tint-color($gray, 50%);
+$gray-300: tint-color($gray, 40%);
+$gray-350: tint-color($gray, 30%);
+$gray-400: tint-color($gray, 20%);
+$gray-450: tint-color($gray, 10%);
+$gray-500: $gray;
+$gray-550: shade-color($gray, 10%);
+$gray-600: shade-color($gray, 20%);
+$gray-650: shade-color($gray, 30%);
+$gray-700: shade-color($gray, 40%);
+$gray-750: shade-color($gray, 50%);
+$gray-800: shade-color($gray, 60%);
+$gray-850: shade-color($gray, 70%);
+$gray-900: shade-color($gray, 80%);
+$black: shade-color($gray, 90%);
+// ---------------------------------------------------------------------------------
+$body-bg: $black;
+$body-color: $gray-100;
+$light: $gray-150;
+$dark: $gray-900;
+$text-muted: $gray-500;
+$primary: #ee3627;
+$secondary: navy;
+$info: blue;
+$success: green;
+$warning: orange;
+$danger: red;
+// ---------------------------------------------------------------------------------
+$min-contrast-ratio: 4.5;
+$color-contrast-dark: $body-bg;
+$color-contrast-light: $body-color;
+// ---------------------------------------------------------------------------------
+// B) Spacing
+// ---------------------------------------------------------------------------------
+$spacer: 1rem;
+$spacer-ratio: 1.75;
+$spacer-ratio-sqrt: 1.323;
+$spacers: (
+        0: 0,
+        1: $spacer * .5,
+        2: $spacer * .875,
+        3: $spacer * $spacer-ratio-sqrt,
+        4: $spacer * $spacer-ratio,
+        5: $spacer * $spacer-ratio * 2,
+        6: $spacer * $spacer-ratio * 3,
+        7: $spacer * $spacer-ratio * 4,
+        8: $spacer * $spacer-ratio * 8,
+        9: $spacer * $spacer-ratio * 16,
+);
+// ---------------------------------------------------------------------------------
+// C) Layout
+// ---------------------------------------------------------------------------------
+$grid-columns: 4;
+$grid-row-columns: 4;
+$grid-gutter-width: $spacer * $spacer-ratio;
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+);
+// ---------------------------------------------------------------------------------
+$container-padding-x: $grid-gutter-width;
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+);
+// ---------------------------------------------------------------------------------
+// D) Typography
+// ---------------------------------------------------------------------------------
+$font-family-sans-serif: "Inter", "Helvetica Neue", sans-serif;
+$font-size-root: 16px;
+$font-size-base: $spacer;
+$font-size-sm: $spacer * .875;
+$font-size-lg: $spacer * 1.125;
+$letter-spacing-base: 0.01em;
+// ---------------------------------------------------------------------------------
+$line-height-base: $spacer-ratio;
+$line-height-sm: $spacer-ratio-sqrt;
+$line-height-lg: 2;
+// ---------------------------------------------------------------------------------
+$font-weight-lighter: 400;
+$font-weight-light: 400;
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+$font-weight-bolder: 600;
+// ---------------------------------------------------------------------------------
+$headings-color: $body-color;
+$headings-font-family: $font-family-sans-serif;
+$headings-font-style: normal;
+$headings-font-weight: $font-weight-normal;
+$headings-line-height: 1;
+$headings-margin-bottom: 0;
+// ---------------------------------------------------------------------------------
+$h1-font-size: $spacer * $spacer-ratio * 2 * .8;
+$h1-letter-spacing: -0.03em;
+$h1-line-height: 1.25;
+$h1-text-transform: none;
+// ---------------------------------------------------------------------------------
+$h2-font-size: $spacer * $spacer-ratio-sqrt;
+$h2-letter-spacing: -0.01em;
+$h2-line-height: $spacer-ratio-sqrt;
+$h2-text-transform: none;
+// ---------------------------------------------------------------------------------
+$h3-font-size: $h2-font-size;
+$h3-letter-spacing: $h2-letter-spacing;
+$h3-line-height: $h2-line-height;
+$h3-text-transform: none;
+// ---------------------------------------------------------------------------------
+$h4-font-size: $h2-font-size;
+$h4-letter-spacing: $h2-letter-spacing;
+$h4-line-height: $h2-line-height;
+$h4-text-transform: none;
+// ---------------------------------------------------------------------------------
+$h5-font-size: $h2-font-size;
+$h5-letter-spacing: $h2-letter-spacing;
+$h5-line-height: $h2-line-height;
+$h5-text-transform: none;
+// ---------------------------------------------------------------------------------
+$h6-font-size: $h2-font-size;
+$h6-letter-spacing: $h2-letter-spacing;
+$h6-line-height: $h2-line-height;
+$h6-text-transform: none;
+// ---------------------------------------------------------------------------------
+$display-font-sizes: (
+        1: map-get($spacers, 9),
+        2: map-get($spacers, 8),
+        3: map-get($spacers, 7),
+        4: map-get($spacers, 6),
+        5: map-get($spacers, 5),
+        6: map-get($spacers, 4),
+);
+$display-font-weight: $font-weight-light;
+$display-line-height: 1;
+// ---------------------------------------------------------------------------------
+$lead-font-size: $h2-font-size;
+$lead-font-weight: $font-weight-normal;
+// ---------------------------------------------------------------------------------
+$blockquote-font-size: $h2-font-size;
+$blockquote-letter-spacing: $h2-letter-spacing;
+$blockquote-line-height: $h2-line-height;
+$blockquote-margin-y: 0;
+$blockquote-footer-color: $text-muted;
+$blockquote-footer-font-size: $font-size-base;
+// ---------------------------------------------------------------------------------
+$paragraph-margin-bottom: 0;
+$small-font-size: $font-size-sm;
+// ---------------------------------------------------------------------------------
+// E) Utilities
+// ---------------------------------------------------------------------------------
+$border-width: 2px;
+$border-widths: (
+        1: 1px,
+        2: 2px,
+        3: 3px,
+        4: 4px,
+        5: 5px,
+        6: 6px,
+        7: 7px,
+        8: 8px,
+        9: 9px,
+);
+$border-color: $text-muted;
+$border-radius: .25rem;
+$border-radius-sm: .125rem;
+$border-radius-lg: .375rem;
+$border-radius-pill: 50rem;
+// ---------------------------------------------------------------------------------
+$letter-spacings: (
+        1: 0.01em,
+        2: 0.02em,
+        3: 0.03em,
+        4: 0.04em,
+        5: 0.05em,
+        6: 0.06em,
+        7: 0.07em,
+        8: 0.08em,
+        9: 0.09em,
+);
+$utilities: (
+        "letter-spacing": (
+                property: letter-spacing,
+                values: (
+                        map-merge($letter-spacings, negativify-map($letter-spacings))
+                )
+        )
+);
+// ---------------------------------------------------------------------------------
+// F) Elements & Components
+// ---------------------------------------------------------------------------------
+$link-color: $body-color;
+$link-font-weight: $font-weight-normal + 100;
+$link-decoration: none;
+$link-hover-color: $text-muted;
+$link-hover-decoration: none;
+$link-letter-spacing: $letter-spacing-base + 0.01em;
+$link-shade-percentage: 0;
+// ---------------------------------------------------------------------------------
+// G) Custom
+// ---------------------------------------------------------------------------------
+$prose-max-width: 72ch;
+$prose-headings-margin-top: map-get($spacers, 6);
+$prose-headings-margin-bottom: map-get($spacers, 4);
+$prose-paragraph-adjacent-sibling-margin-top: $prose-headings-margin-bottom;
+$prose-strong-font-weight: $font-weight-normal + 200;
+$prose-list-padding-left: $prose-headings-margin-bottom;
+$prose-list-padding-top: $prose-headings-margin-bottom;
+$prose-list-padding-bottom: $prose-headings-margin-bottom;
+$prose-list-item-adjacent-sibling-margin-top: $prose-headings-margin-bottom;
+$prose-img-border-radius: $border-radius;
+// =================================================================================
+// 2. VARIABLES TO RESETS
+// ---------------------------------------------------------------------------------
+@import "bootstrap/scss/variables";
+// ---------------------------------------------------------------------------------
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+// ---------------------------------------------------------------------------------
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/reboot";
+// ---------------------------------------------------------------------------------
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  letter-spacing: $letter-spacing-base;
+}
+
+h1 {
+  letter-spacing: $h1-letter-spacing;
+  line-height: $h1-line-height;
+  text-transform: $h1-text-transform;
+}
+
+h2 {
+  letter-spacing: $h2-letter-spacing;
+  line-height: $h2-line-height;
+  text-transform: $h2-text-transform;
+}
+
+h3 {
+  letter-spacing: $h3-letter-spacing;
+  line-height: $h3-line-height;
+  text-transform: $h3-text-transform;
+}
+
+h4 {
+  letter-spacing: $h4-letter-spacing;
+  line-height: $h4-line-height;
+  text-transform: $h4-text-transform;
+}
+
+h5 {
+  letter-spacing: $h5-letter-spacing;
+  line-height: $h5-line-height;
+  text-transform: $h5-text-transform;
+}
+
+h6 {
+  letter-spacing: $h6-letter-spacing;
+  line-height: $h6-line-height;
+  text-transform: $h6-text-transform;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  font-weight: $link-font-weight;
+  letter-spacing: $link-letter-spacing;
 }
 
-* {
-  box-sizing: border-box;
+blockquote {
+  letter-spacing: $blockquote-letter-spacing;
+  line-height: $blockquote-line-height;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+ol,
+ul,
+dl {
+  margin: 0;
 }
+
+address {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+// =================================================================================
+// 3. REST OF BOOTSTRAP
+// ---------------------------------------------------------------------------------
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+//@import "bootstrap/scss/tables";
+//@import "bootstrap/scss/forms";
+//@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+//@import "bootstrap/scss/dropdown";
+//@import "bootstrap/scss/button-group";
+//@import "bootstrap/scss/nav";
+//@import "bootstrap/scss/navbar";
+//@import "bootstrap/scss/card";
+//@import "bootstrap/scss/accordion";
+//@import "bootstrap/scss/breadcrumb";
+//@import "bootstrap/scss/pagination";
+//@import "bootstrap/scss/badge";
+//@import "bootstrap/scss/alert";
+//@import "bootstrap/scss/progress";
+//@import "bootstrap/scss/list-group";
+//@import "bootstrap/scss/close";
+//@import "bootstrap/scss/toasts";
+//@import "bootstrap/scss/modal";
+//@import "bootstrap/scss/tooltip";
+//@import "bootstrap/scss/popover";
+//@import "bootstrap/scss/carousel";
+//@import "bootstrap/scss/spinners";
+//@import "bootstrap/scss/offcanvas";
+//@import "bootstrap/scss/placeholders";
+// ---------------------------------------------------------------------------------
+@import "bootstrap/scss/helpers";
+// ---------------------------------------------------------------------------------
+@import "bootstrap/scss/utilities/api";
+// ---------------------------------------------------------------------------------
