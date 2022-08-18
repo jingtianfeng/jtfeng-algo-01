@@ -228,9 +228,9 @@ $prose-img-border-radius: $border-radius;
 // ---------------------------------------------------------------------------------
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
-@import "bootstrap/scss/root";
-// ---------------------------------------------------------------------------------
 @import "bootstrap/scss/utilities";
+// ---------------------------------------------------------------------------------
+@import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot";
 // ---------------------------------------------------------------------------------
 body {
