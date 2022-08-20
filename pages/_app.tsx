@@ -8,6 +8,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       <Component {...pageProps} />
     </Layout>
   );
-}
+};
 
 export default MyApp;
