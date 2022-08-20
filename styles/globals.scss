@@ -181,25 +181,25 @@ $border-radius-sm: 0.125rem;
 $border-radius-lg: 0.375rem;
 $border-radius-pill: 50rem;
 // ---------------------------------------------------------------------------------
-$letter-spacings: (
-  1: 0.01em,
-  2: 0.02em,
-  3: 0.03em,
-  4: 0.04em,
-  5: 0.05em,
-  6: 0.06em,
-  7: 0.07em,
-  8: 0.08em,
-  9: 0.09em,
-);
-$utilities: (
-  "letter-spacing": (
-    property: letter-spacing,
-    values: (
-      map-merge($letter-spacings, negativify-map($letter-spacings)),
-    ),
-  ),
-);
+// $letter-spacings: (
+//   1: 0.01em,
+//   2: 0.02em,
+//   3: 0.03em,
+//   4: 0.04em,
+//   5: 0.05em,
+//   6: 0.06em,
+//   7: 0.07em,
+//   8: 0.08em,
+//   9: 0.09em,
+// );
+// $utilities: (
+//   "letter-spacing": (
+//     property: letter-spacing,
+//     values: (
+//       map-merge($letter-spacings, negativify-map($letter-spacings)),
+//     ),
+//   ),
+// );
 // ---------------------------------------------------------------------------------
 // F) Elements & Components
 // ---------------------------------------------------------------------------------
