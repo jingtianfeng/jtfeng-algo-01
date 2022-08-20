@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>DS/Algo Study</title>
         <meta
@@ -24,7 +24,7 @@ const Home: NextPage = () => {
           section 1 title
         </h2>
       </section>
-    </div>
+    </>
   );
 };
 
