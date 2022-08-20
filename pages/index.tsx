@@ -14,12 +14,16 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>DS/Algo Study</h1>
-      </main>
-
-      <footer className={styles.footer}></footer>
+      <header>
+        <h1>
+          page title
+        </h1>
+      </header>
+      <section>
+        <h2>
+          section 1 title
+        </h2>
+      </section>
     </div>
   );
 };
