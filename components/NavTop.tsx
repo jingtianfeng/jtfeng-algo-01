@@ -1,4 +1,4 @@
-const NavTop = () => {
+const NavTop: React.FC = () => {
 	<nav>
 		NavTop
 	</nav>
