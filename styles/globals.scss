@@ -50,16 +50,16 @@ $spacer: 1rem;
 $spacer-ratio: 1.75;
 $spacer-ratio-sqrt: 1.323;
 $spacers: (
-        0: 0,
-        1: $spacer * .5,
-        2: $spacer * .875,
-        3: $spacer * $spacer-ratio-sqrt,
-        4: $spacer * $spacer-ratio,
-        5: $spacer * $spacer-ratio * 2,
-        6: $spacer * $spacer-ratio * 3,
-        7: $spacer * $spacer-ratio * 4,
-        8: $spacer * $spacer-ratio * 8,
-        9: $spacer * $spacer-ratio * 16,
+  0: 0,
+  1: $spacer * 0.5,
+  2: $spacer * 0.875,
+  3: $spacer * $spacer-ratio-sqrt,
+  4: $spacer * $spacer-ratio,
+  5: $spacer * $spacer-ratio * 2,
+  6: $spacer * $spacer-ratio * 3,
+  7: $spacer * $spacer-ratio * 4,
+  8: $spacer * $spacer-ratio * 8,
+  9: $spacer * $spacer-ratio * 16,
 );
 // ---------------------------------------------------------------------------------
 // C) Layout
@@ -68,17 +68,17 @@ $grid-columns: 4;
 $grid-row-columns: 4;
 $grid-gutter-width: $spacer * $spacer-ratio;
 $grid-breakpoints: (
-        xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
 );
 // ---------------------------------------------------------------------------------
 $container-padding-x: $grid-gutter-width;
 $container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
 );
 // ---------------------------------------------------------------------------------
 // D) Typography
@@ -86,7 +86,7 @@ $container-max-widths: (
 $font-family-sans-serif: "Inter", "Helvetica Neue", sans-serif;
 $font-size-root: 16px;
 $font-size-base: $spacer;
-$font-size-sm: $spacer * .875;
+$font-size-sm: $spacer * 0.875;
 $font-size-lg: $spacer * 1.125;
 $letter-spacing-base: 0.01em;
 // ---------------------------------------------------------------------------------
@@ -107,7 +107,7 @@ $headings-font-weight: $font-weight-normal;
 $headings-line-height: 1;
 $headings-margin-bottom: 0;
 // ---------------------------------------------------------------------------------
-$h1-font-size: $spacer * $spacer-ratio * 2 * .8;
+$h1-font-size: $spacer * $spacer-ratio * 2 * 0.8;
 $h1-letter-spacing: -0.03em;
 $h1-line-height: 1.25;
 $h1-text-transform: none;
@@ -138,12 +138,12 @@ $h6-line-height: $h2-line-height;
 $h6-text-transform: none;
 // ---------------------------------------------------------------------------------
 $display-font-sizes: (
-        1: map-get($spacers, 9),
-        2: map-get($spacers, 8),
-        3: map-get($spacers, 7),
-        4: map-get($spacers, 6),
-        5: map-get($spacers, 5),
-        6: map-get($spacers, 4),
+  1: map-get($spacers, 9),
+  2: map-get($spacers, 8),
+  3: map-get($spacers, 7),
+  4: map-get($spacers, 6),
+  5: map-get($spacers, 5),
+  6: map-get($spacers, 4),
 );
 $display-font-weight: $font-weight-light;
 $display-line-height: 1;
@@ -165,40 +165,40 @@ $small-font-size: $font-size-sm;
 // ---------------------------------------------------------------------------------
 $border-width: 2px;
 $border-widths: (
-        1: 1px,
-        2: 2px,
-        3: 3px,
-        4: 4px,
-        5: 5px,
-        6: 6px,
-        7: 7px,
-        8: 8px,
-        9: 9px,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+  6: 6px,
+  7: 7px,
+  8: 8px,
+  9: 9px,
 );
 $border-color: $text-muted;
-$border-radius: .25rem;
-$border-radius-sm: .125rem;
-$border-radius-lg: .375rem;
+$border-radius: 0.25rem;
+$border-radius-sm: 0.125rem;
+$border-radius-lg: 0.375rem;
 $border-radius-pill: 50rem;
 // ---------------------------------------------------------------------------------
 $letter-spacings: (
-        1: 0.01em,
-        2: 0.02em,
-        3: 0.03em,
-        4: 0.04em,
-        5: 0.05em,
-        6: 0.06em,
-        7: 0.07em,
-        8: 0.08em,
-        9: 0.09em,
+  1: 0.01em,
+  2: 0.02em,
+  3: 0.03em,
+  4: 0.04em,
+  5: 0.05em,
+  6: 0.06em,
+  7: 0.07em,
+  8: 0.08em,
+  9: 0.09em,
 );
 $utilities: (
-        "letter-spacing": (
-                property: letter-spacing,
-                values: (
-                        map-merge($letter-spacings, negativify-map($letter-spacings))
-                )
-        )
+  "letter-spacing": (
+    property: letter-spacing,
+    values: (
+      map-merge($letter-spacings, negativify-map($letter-spacings)),
+    ),
+  ),
 );
 // ---------------------------------------------------------------------------------
 // F) Elements & Components

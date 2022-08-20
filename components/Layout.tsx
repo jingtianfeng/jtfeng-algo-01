@@ -1,19 +1,19 @@
-import {ReactNode} from 'react'
-import NavTop from './NavTop'
-import Footer from './Footer'
+import { ReactNode } from "react";
+import NavTop from "./NavTop";
+import Footer from "./Footer";
 
 interface Props {
-	children?: ReactNode
+  children?: ReactNode;
 }
 
-const Layout: React.FC<Props> = ({children}) => {
-	return (
-		<>
-			<NavTop />
-			<main>{children}</main>
-			<Footer />
-		</>
-	)
-}
+const Layout: React.FC<Props> = ({ children }) => {
+  return (
+    <>
+      <NavTop />
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
+};
 
-export default Layout
+export default Layout;
