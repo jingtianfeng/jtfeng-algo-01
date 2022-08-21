@@ -1,5 +1,11 @@
 const NavTop: React.FC<{}> = () => {
-  return <nav>NavTop</nav>;
+  return (
+    <nav>
+      <div class="container">
+        NavTop
+      </div>
+    </nav>
+  );
 };
 
 export default NavTop;
