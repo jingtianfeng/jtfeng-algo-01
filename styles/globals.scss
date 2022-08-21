@@ -110,32 +110,32 @@ $headings-margin-bottom: 0;
 $h1-font-size: $spacer * $spacer-ratio;
 $h1-letter-spacing: -0.03em;
 $h1-line-height: 2;
-$h1-text-transform: none;
+$h1-text-transform: uppercase;
 // ---------------------------------------------------------------------------------
 $h2-font-size: $h1-font-size;
 $h2-letter-spacing: $h1-letter-spacing;
 $h2-line-height: $h1-line-height;
-$h2-text-transform: $h1-text-transform;
+$h2-text-transform: capitalize;
 // ---------------------------------------------------------------------------------
 $h3-font-size: $spacer * $spacer-ratio-sqrt;
 $h3-letter-spacing: -0.01em;
 $h3-line-height: $spacer-ratio-sqrt;
-$h3-text-transform: none;
+$h3-text-transform: uppercase;
 // ---------------------------------------------------------------------------------
 $h4-font-size: $h3-font-size;
 $h4-letter-spacing: $h3-letter-spacing;
 $h4-line-height: $h3-line-height;
-$h4-text-transform: none;
+$h4-text-transform: capitalize;
 // ---------------------------------------------------------------------------------
-$h5-font-size: $h3-font-size;
-$h5-letter-spacing: $h3-letter-spacing;
-$h5-line-height: $h3-line-height;
-$h5-text-transform: none;
+$h5-font-size: $h4-font-size;
+$h5-letter-spacing: $h4-letter-spacing;
+$h5-line-height: $h4-line-height;
+$h5-text-transform: lowercase;
 // ---------------------------------------------------------------------------------
-$h6-font-size: $h3-font-size;
-$h6-letter-spacing: $h3-letter-spacing;
-$h6-line-height: $h3-line-height;
-$h6-text-transform: none;
+$h6-font-size: $h5-font-size;
+$h6-letter-spacing: $h5-letter-spacing;
+$h6-line-height: $h5-line-height;
+$h6-text-transform: lowercase;
 // ---------------------------------------------------------------------------------
 $display-font-sizes: (
   1: map-get($spacers, 9),
