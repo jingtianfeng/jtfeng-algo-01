@@ -16,16 +16,16 @@ const Home: NextPage = () => {
       </Head>
       <header>
         <div className="container">
-          <h1>PAGE TITLE</h1>
+          <h1>Page title</h1>
         </div>
       </header>
       <section>
         <div className="container">
-          <h2>Section Title</h2>
-          <h3>heading 3</h3>
-          <h4>heading 4</h4>
-          <h5>heading 5</h5>
-          <h6>heading 6</h6>
+          <h2>Section title</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
           <p>The quick brown fox jumps over the lazy dog.</p>
         </div>
       </section>
