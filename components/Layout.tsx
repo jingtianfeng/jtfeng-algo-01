@@ -3,7 +3,7 @@ import NavTop from "./NavTop";
 import Footer from "./Footer";
 
 interface Props {
-  children?: ReactNode;
+  children: ReactNode;
 }
 
 const Layout: React.FC<Props> = ({ children }) => {
