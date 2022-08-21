@@ -107,34 +107,34 @@ $headings-font-weight: $font-weight-normal;
 $headings-line-height: 1;
 $headings-margin-bottom: 0;
 // ---------------------------------------------------------------------------------
-$h1-font-size: $spacer * $spacer-ratio * 2 * 0.8;
+$h1-font-size: $spacer * $spacer-ratio;
 $h1-letter-spacing: -0.03em;
-$h1-line-height: 1.25;
+$h1-line-height: 2;
 $h1-text-transform: none;
 // ---------------------------------------------------------------------------------
-$h2-font-size: $spacer * $spacer-ratio-sqrt;
-$h2-letter-spacing: -0.01em;
-$h2-line-height: $spacer-ratio-sqrt;
-$h2-text-transform: none;
+$h2-font-size: $h1-font-size;
+$h2-letter-spacing: $h1-letter-spacing;
+$h2-line-height: $h1-line-height;
+$h2-text-transform: $h1-text-transform;
 // ---------------------------------------------------------------------------------
-$h3-font-size: $h2-font-size;
-$h3-letter-spacing: $h2-letter-spacing;
-$h3-line-height: $h2-line-height;
+$h3-font-size: $spacer * $spacer-ratio-sqrt;
+$h3-letter-spacing: -0.01em;
+$h3-line-height: $spacer-ratio-sqrt;
 $h3-text-transform: none;
 // ---------------------------------------------------------------------------------
-$h4-font-size: $h2-font-size;
-$h4-letter-spacing: $h2-letter-spacing;
-$h4-line-height: $h2-line-height;
+$h4-font-size: $h3-font-size;
+$h4-letter-spacing: $h3-letter-spacing;
+$h4-line-height: $h3-line-height;
 $h4-text-transform: none;
 // ---------------------------------------------------------------------------------
-$h5-font-size: $h2-font-size;
-$h5-letter-spacing: $h2-letter-spacing;
-$h5-line-height: $h2-line-height;
+$h5-font-size: $h3-font-size;
+$h5-letter-spacing: $h3-letter-spacing;
+$h5-line-height: $h3-line-height;
 $h5-text-transform: none;
 // ---------------------------------------------------------------------------------
-$h6-font-size: $h2-font-size;
-$h6-letter-spacing: $h2-letter-spacing;
-$h6-line-height: $h2-line-height;
+$h6-font-size: $h3-font-size;
+$h6-letter-spacing: $h3-letter-spacing;
+$h6-line-height: $h3-line-height;
 $h6-text-transform: none;
 // ---------------------------------------------------------------------------------
 $display-font-sizes: (
