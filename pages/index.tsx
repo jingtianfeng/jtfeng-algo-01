@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </Head>
       <header id="index-header">
         <div className="container py-7">
-          <div className="row g-5">
+          <div className="row">
             <div className="col-4 col-lg-2 vstack gap-4">
               <h1 className="border p-5">
                 The quick brown fox jumps over the lazy dog.
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
       </header>
       <section id="index-section1">
         <div className="container py-7">
-          <div className="row g-5">
+          <div className="row">
             <div className="col-4 col-lg-2 vstack gap-4">
               <figure className="border p-4">
                 <blockquote className="blockquote">
