@@ -49,10 +49,11 @@ $color-contrast-light: $body-color;
 $spacer: 1rem;
 $spacer-ratio: 1.75;
 $spacer-ratio-sqrt: 1.323;
+$spacer-ratio-sqrt-inverse: .756;
 $spacers: (
   0: 0,
-  1: $spacer * 0.5,
-  2: $spacer * 0.875,
+  1: $spacer * .5,
+  2: $spacer * .875,
   3: $spacer * $spacer-ratio-sqrt,
   4: $spacer * $spacer-ratio,
   5: $spacer * $spacer-ratio * 2,
@@ -86,9 +87,9 @@ $container-max-widths: (
 $font-family-sans-serif: "Inter", "Helvetica Neue", sans-serif;
 $font-size-root: 16px;
 $font-size-base: $spacer;
-$font-size-sm: $spacer * 0.875;
+$font-size-sm: $spacer * .875;
 $font-size-lg: $spacer * 1.125;
-$letter-spacing-base: 0.01em;
+$letter-spacing-base: .01em;
 // ---------------------------------------------------------------------------------
 $line-height-base: $spacer-ratio;
 $line-height-sm: $spacer-ratio-sqrt;
@@ -107,35 +108,35 @@ $headings-font-weight: $font-weight-normal;
 $headings-line-height: 1;
 $headings-margin-bottom: 0;
 // ---------------------------------------------------------------------------------
-$h1-font-size: $spacer * $spacer-ratio;
-$h1-letter-spacing: -0.03em;
-$h1-line-height: 2;
-$h1-text-transform: uppercase;
+$h1-font-size: $spacer * $spacer-ratio * 2 * $spacer-ratio-sqrt-inverse;
+$h1-letter-spacing: -.01em;
+$h1-line-height: $spacer-ratio-sqrt;
+$h1-text-transform: none;
 // ---------------------------------------------------------------------------------
-$h2-font-size: $h1-font-size;
-$h2-letter-spacing: $h1-letter-spacing;
-$h2-line-height: $h1-line-height;
-$h2-text-transform: capitalize;
+$h2-font-size: $spacer * $spacer-ratio * 2 * $spacer-ratio-sqrt-inverse;
+$h2-letter-spacing: -.01em;
+$h2-line-height: $spacer-ratio-sqrt;
+$h2-text-transform: none;
 // ---------------------------------------------------------------------------------
 $h3-font-size: $spacer * $spacer-ratio-sqrt;
-$h3-letter-spacing: -0.01em;
+$h3-letter-spacing: 0;
 $h3-line-height: $spacer-ratio-sqrt;
-$h3-text-transform: uppercase;
+$h3-text-transform: none;
 // ---------------------------------------------------------------------------------
-$h4-font-size: $h3-font-size;
-$h4-letter-spacing: $h3-letter-spacing;
-$h4-line-height: $h3-line-height;
-$h4-text-transform: capitalize;
+$h4-font-size: $spacer * $spacer-ratio-sqrt;
+$h4-letter-spacing: 0;
+$h4-line-height: $spacer-ratio-sqrt;
+$h4-text-transform: none;
 // ---------------------------------------------------------------------------------
-$h5-font-size: $h4-font-size;
-$h5-letter-spacing: $h4-letter-spacing;
-$h5-line-height: $h4-line-height;
-$h5-text-transform: lowercase;
+$h5-font-size: $spacer * $spacer-ratio-sqrt;
+$h5-letter-spacing: 0;
+$h5-line-height: $spacer-ratio-sqrt;
+$h5-text-transform: none;
 // ---------------------------------------------------------------------------------
-$h6-font-size: $h5-font-size;
-$h6-letter-spacing: $h5-letter-spacing;
-$h6-line-height: $h5-line-height;
-$h6-text-transform: lowercase;
+$h6-font-size: $spacer * $spacer-ratio-sqrt;
+$h6-letter-spacing: 0;
+$h6-line-height: $spacer-ratio-sqrt;
+$h6-text-transform: none;
 // ---------------------------------------------------------------------------------
 $display-font-sizes: (
   1: map-get($spacers, 9),
@@ -148,12 +149,12 @@ $display-font-sizes: (
 $display-font-weight: $font-weight-light;
 $display-line-height: 1;
 // ---------------------------------------------------------------------------------
-$lead-font-size: $h2-font-size;
-$lead-font-weight: $font-weight-normal;
+$lead-font-size: $font-size-base;
+$lead-font-weight: $font-weight-bold;
 // ---------------------------------------------------------------------------------
-$blockquote-font-size: $h2-font-size;
-$blockquote-letter-spacing: $h2-letter-spacing;
-$blockquote-line-height: $h2-line-height;
+$blockquote-font-size: $spacer * $spacer-ratio-sqrt;
+$blockquote-letter-spacing: 0;
+$blockquote-line-height: $spacer-ratio-sqrt;
 $blockquote-margin-y: 0;
 $blockquote-footer-color: $text-muted;
 $blockquote-footer-font-size: $font-size-base;
@@ -176,21 +177,21 @@ $border-widths: (
   9: 9px,
 );
 $border-color: $text-muted;
-$border-radius: 0.25rem;
-$border-radius-sm: 0.125rem;
-$border-radius-lg: 0.375rem;
+$border-radius: .25rem;
+$border-radius-sm: .125rem;
+$border-radius-lg: .375rem;
 $border-radius-pill: 50rem;
 // ---------------------------------------------------------------------------------
 $letter-spacings: (
-  1: 0.01em,
-  2: 0.02em,
-  3: 0.03em,
-  4: 0.04em,
-  5: 0.05em,
-  6: 0.06em,
-  7: 0.07em,
-  8: 0.08em,
-  9: 0.09em,
+  1: .01em,
+  2: .02em,
+  3: .03em,
+  4: .04em,
+  5: .05em,
+  6: .06em,
+  7: .07em,
+  8: .08em,
+  9: .09em,
 );
 $utilities: (
   "letter-spacing": (
@@ -202,25 +203,13 @@ $utilities: (
 // F) Elements & Components
 // ---------------------------------------------------------------------------------
 $link-color: $body-color;
-$link-font-weight: $font-weight-normal + 100;
+$link-font-weight: $font-weight-bold;
+$link-letter-spacing: $letter-spacing-base + .01em;
+$link-text-transform: uppercase;
 $link-decoration: none;
 $link-hover-color: $text-muted;
 $link-hover-decoration: none;
-$link-letter-spacing: $letter-spacing-base + 0.01em;
 $link-shade-percentage: 0;
-// ---------------------------------------------------------------------------------
-// G) Custom
-// ---------------------------------------------------------------------------------
-$prose-max-width: 72ch;
-$prose-headings-margin-top: map-get($spacers, 6);
-$prose-headings-margin-bottom: map-get($spacers, 4);
-$prose-paragraph-adjacent-sibling-margin-top: $prose-headings-margin-bottom;
-$prose-strong-font-weight: $font-weight-normal + 200;
-$prose-list-padding-left: $prose-headings-margin-bottom;
-$prose-list-padding-top: $prose-headings-margin-bottom;
-$prose-list-padding-bottom: $prose-headings-margin-bottom;
-$prose-list-item-adjacent-sibling-margin-top: $prose-headings-margin-bottom;
-$prose-img-border-radius: $border-radius;
 // =================================================================================
 // 2. VARIABLES TO RESETS
 // ---------------------------------------------------------------------------------
@@ -276,6 +265,7 @@ h6 {
 a {
   font-weight: $link-font-weight;
   letter-spacing: $link-letter-spacing;
+  text-transform: $link-text-transform;
 }
 
 blockquote {
@@ -333,48 +323,3 @@ figure {
 @import "bootstrap/scss/helpers";
 // ---------------------------------------------------------------------------------
 @import "bootstrap/scss/utilities/api";
-// =================================================================================
-// 4. NON-BOOTSTRAP
-// ---------------------------------------------------------------------------------
-.prose {
-  max-width: $prose-max-width;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: $prose-headings-margin-top;
-    margin-bottom: $prose-headings-margin-bottom;
-  }
-
-  p + p {
-    margin-top: $prose-paragraph-adjacent-sibling-margin-top;
-  }
-
-  strong {
-    font-weight: $prose-strong-font-weight;
-  }
-
-  a {
-    text-decoration: underline;
-  }
-
-  ol,
-  ul {
-    padding-left: $prose-list-padding-left;
-    padding-top: $prose-list-padding-top;
-    padding-bottom: $prose-list-padding-bottom;
-  }
-
-  li + li {
-    margin-top: $prose-list-item-adjacent-sibling-margin-top;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: $prose-img-border-radius;
-  }
-}
