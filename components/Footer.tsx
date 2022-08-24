@@ -5,7 +5,9 @@ const Footer: React.FC<{}> = () => {
       <div className="container py-7">
         <div className="row">
           <div className="col-4">
-            (sitemap)
+            <div className="border">
+              (sitemap)
+            </div>
           </div>
         </div>
       </div>
