@@ -86,7 +86,7 @@ $container-max-widths: (
 // ---------------------------------------------------------------------------------
 // D) Typography
 // ---------------------------------------------------------------------------------
-$font-family-sans-serif: "Inter", "Helvetica Neue", sans-serif;
+$font-family-sans-serif: "Inter", "Helvetica Neue", "Arial", sans-serif;
 $font-size-root: 16px;
 $font-size-base: $spacer;
 $font-size-sm: $spacer * $spacer-ratio-half;
@@ -107,7 +107,7 @@ $headings-color: $body-color;
 $headings-font-family: $font-family-sans-serif;
 $headings-font-style: normal;
 $headings-font-weight: $font-weight-normal;
-$headings-line-height: 1;
+$headings-line-height: $spacer-ratio-sqrt;
 $headings-margin-bottom: 0;
 // ---------------------------------------------------------------------------------
 $h1-font-size: $spacer * $spacer-ratio * 2 * $spacer-ratio-sqrt-inverse;
@@ -145,10 +145,8 @@ $display-font-sizes: (
   2: map-get($spacers, 8),
   3: map-get($spacers, 7),
   4: map-get($spacers, 6),
-  5: map-get($spacers, 5),
-  6: map-get($spacers, 4),
 );
-$display-font-weight: $font-weight-light;
+$display-font-weight: $font-weight-normal;
 $display-line-height: 1;
 // ---------------------------------------------------------------------------------
 $lead-font-size: $font-size-base;
@@ -207,7 +205,7 @@ $utilities: (
 // F) Elements & Components
 // ---------------------------------------------------------------------------------
 $link-color: $body-color;
-$link-font-weight: $font-weight-bold;
+$link-font-weight: $font-weight-normal + 100;
 $link-letter-spacing: $letter-spacing-base + 0.01em;
 $link-text-transform: uppercase;
 $link-decoration: none;
