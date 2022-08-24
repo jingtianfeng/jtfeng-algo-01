@@ -1,9 +1,7 @@
 const NavTop: React.FC<{}> = () => {
   return (
     <nav>
-      <div className="container">
-        NavTop
-      </div>
+      <div className="container">NavTop</div>
     </nav>
   );
 };

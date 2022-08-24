@@ -49,11 +49,11 @@ $color-contrast-light: $body-color;
 $spacer: 1rem;
 $spacer-ratio: 1.75;
 $spacer-ratio-sqrt: 1.323;
-$spacer-ratio-sqrt-inverse: .756;
+$spacer-ratio-sqrt-inverse: 0.756;
 $spacers: (
   0: 0,
-  1: $spacer * .5,
-  2: $spacer * .875,
+  1: $spacer * 0.5,
+  2: $spacer * 0.875,
   3: $spacer * $spacer-ratio-sqrt,
   4: $spacer * $spacer-ratio,
   5: $spacer * $spacer-ratio * 2,
@@ -87,9 +87,9 @@ $container-max-widths: (
 $font-family-sans-serif: "Inter", "Helvetica Neue", sans-serif;
 $font-size-root: 16px;
 $font-size-base: $spacer;
-$font-size-sm: $spacer * .875;
+$font-size-sm: $spacer * 0.875;
 $font-size-lg: $spacer * 1.125;
-$letter-spacing-base: .01em;
+$letter-spacing-base: 0.01em;
 // ---------------------------------------------------------------------------------
 $line-height-base: $spacer-ratio;
 $line-height-sm: $spacer-ratio-sqrt;
@@ -109,12 +109,12 @@ $headings-line-height: 1;
 $headings-margin-bottom: 0;
 // ---------------------------------------------------------------------------------
 $h1-font-size: $spacer * $spacer-ratio * 2 * $spacer-ratio-sqrt-inverse;
-$h1-letter-spacing: -.01em;
+$h1-letter-spacing: -0.01em;
 $h1-line-height: $spacer-ratio-sqrt;
 $h1-text-transform: none;
 // ---------------------------------------------------------------------------------
 $h2-font-size: $spacer * $spacer-ratio * 2 * $spacer-ratio-sqrt-inverse;
-$h2-letter-spacing: -.01em;
+$h2-letter-spacing: -0.01em;
 $h2-line-height: $spacer-ratio-sqrt;
 $h2-text-transform: none;
 // ---------------------------------------------------------------------------------
@@ -161,7 +161,7 @@ $blockquote-footer-font-size: $font-size-base;
 // ---------------------------------------------------------------------------------
 $paragraph-margin-bottom: 0;
 $small-font-size: $font-size-sm;
-$mark-padding: .25em;
+$mark-padding: 0.25em;
 $mark-bg: $text-muted;
 // ---------------------------------------------------------------------------------
 // E) Utilities
@@ -179,21 +179,21 @@ $border-widths: (
   9: 9px,
 );
 $border-color: $text-muted;
-$border-radius: .25rem;
-$border-radius-sm: .125rem;
-$border-radius-lg: .375rem;
+$border-radius: 0.25rem;
+$border-radius-sm: 0.125rem;
+$border-radius-lg: 0.375rem;
 $border-radius-pill: 50rem;
 // ---------------------------------------------------------------------------------
 $letter-spacings: (
-  1: .01em,
-  2: .02em,
-  3: .03em,
-  4: .04em,
-  5: .05em,
-  6: .06em,
-  7: .07em,
-  8: .08em,
-  9: .09em,
+  1: 0.01em,
+  2: 0.02em,
+  3: 0.03em,
+  4: 0.04em,
+  5: 0.05em,
+  6: 0.06em,
+  7: 0.07em,
+  8: 0.08em,
+  9: 0.09em,
 );
 $utilities: (
   "letter-spacing": (
@@ -206,7 +206,7 @@ $utilities: (
 // ---------------------------------------------------------------------------------
 $link-color: $body-color;
 $link-font-weight: $font-weight-bold;
-$link-letter-spacing: $letter-spacing-base + .01em;
+$link-letter-spacing: $letter-spacing-base + 0.01em;
 $link-text-transform: uppercase;
 $link-decoration: none;
 $link-hover-color: $text-muted;
