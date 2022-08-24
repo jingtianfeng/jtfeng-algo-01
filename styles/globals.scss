@@ -48,12 +48,13 @@ $color-contrast-light: $body-color;
 // ---------------------------------------------------------------------------------
 $spacer: 1rem;
 $spacer-ratio: 1.75;
+$spacer-ratio-min: 0.5;
 $spacer-ratio-half: 0.875;
 $spacer-ratio-sqrt: 1.323;
 $spacer-ratio-sqrt-inverse: 0.756;
 $spacers: (
   0: 0,
-  1: $spacer * 0.5,
+  1: $spacer * $spacer-ratio-min,
   2: $spacer * $spacer-ratio-half,
   3: $spacer * $spacer-ratio-sqrt,
   4: $spacer * $spacer-ratio,
