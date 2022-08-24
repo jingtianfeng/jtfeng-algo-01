@@ -2,15 +2,17 @@ const NavTop: React.FC<{}> = () => {
   return (
     <nav id="nav-top" 
          className="border-bottom">
-      <div className="container py-5">
-        <div className="row">
+      <div className="container py-4">
+        <div className="row gy-2">
           <div className="col-4 col-md-1">
-            <p>
+            <a href="/">
               DS/Algo in TypeScipt
-            </p>
+            </a>
           </div>
           <div className="col-4 col-md-3">
-            (nav)
+            <div className="border">
+              (nav)
+            </div>
           </div>
         </div>
       </div>
