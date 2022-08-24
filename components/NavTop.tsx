@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const NavTop: React.FC<{}> = () => {
   return (
     <nav id="nav-top" 
@@ -5,9 +7,9 @@ const NavTop: React.FC<{}> = () => {
       <div className="container py-4">
         <div className="row gy-2">
           <div className="col-4 col-md-1">
-            <a href="/">
-              DS/Algo in TypeScipt
-            </a>
+            <Link href="/">
+              <a>DS/Algo in TypeScipt</a>
+            </Link>
           </div>
           <div className="col-4 col-md-3">
             <div className="border">
