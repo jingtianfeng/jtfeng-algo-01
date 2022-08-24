@@ -48,12 +48,13 @@ $color-contrast-light: $body-color;
 // ---------------------------------------------------------------------------------
 $spacer: 1rem;
 $spacer-ratio: 1.75;
+$spacer-ratio-half: 0.875;
 $spacer-ratio-sqrt: 1.323;
 $spacer-ratio-sqrt-inverse: 0.756;
 $spacers: (
   0: 0,
   1: $spacer * 0.5,
-  2: $spacer * 0.875,
+  2: $spacer * $spacer-ratio-half,
   3: $spacer * $spacer-ratio-sqrt,
   4: $spacer * $spacer-ratio,
   5: $spacer * $spacer-ratio * 2,
@@ -87,8 +88,8 @@ $container-max-widths: (
 $font-family-sans-serif: "Inter", "Helvetica Neue", sans-serif;
 $font-size-root: 16px;
 $font-size-base: $spacer;
-$font-size-sm: $spacer * 0.875;
-$font-size-lg: $spacer * 1.125;
+$font-size-sm: $spacer * $spacer-ratio-half;
+$font-size-lg: $spacer * $spacer-ratio-sqrt;
 $letter-spacing-base: 0.01em;
 // ---------------------------------------------------------------------------------
 $line-height-base: $spacer-ratio;
