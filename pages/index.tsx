@@ -81,7 +81,7 @@ const Home: NextPage = () => {
               <ul className="list-unstyled border p-4">
                 <li>This is a list.</li>
                 <li>It appears completely unstyled.</li>
-                <li>Structurally, it's still a list.</li>
+                <li>Structurally, it is still a list.</li>
                 <li>This style only applies to immediate child elements.</li>
                 <li>
                   Nested lists:
