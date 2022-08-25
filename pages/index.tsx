@@ -125,7 +125,15 @@ const Home: NextPage = () => {
             </div>
             <div className="col-4 col-lg-2 vstack gap-4">
               <div className="border p-4">
-                (code)
+                <pre>
+                  (pre)
+                </pre>
+                <code>
+                  function()
+                </code>
+                <samp>
+                  (samp)
+                </samp>
               </div>
             </div>
           </div>
