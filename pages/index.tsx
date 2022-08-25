@@ -102,17 +102,17 @@ const Home: NextPage = () => {
           <div className="row gy-5">
             <div className="col-4 col-lg-2 vstack gap-4">
               <div className="border p-4">
-                <dl class="row">
-                  <dt class="col-4 col-md-1">
+                <dl className="row gy-2">
+                  <dt className="col-4 col-md-1">
                     D.L.
                   </dt>
-                  <dd class="col-4 col-md-3">
+                  <dd className="col-4 col-md-3">
                     A description list is perfect for defining terms.
                   </dd>
-                  <dt class="col-4 col-md-1">
+                  <dt className="col-4 col-md-1">
                     D.T.
                   </dt>
-                  <dd class="col-4 col-md-3">
+                  <dd className="col-4 col-md-3">
                     <p>
                       Definition for the term.
                     </p>
