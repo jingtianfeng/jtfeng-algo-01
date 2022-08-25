@@ -97,6 +97,22 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
+      <section id="index-section2">
+        <div className="container py-7">
+          <div className="row gy-5">
+            <div className="col-4 col-lg-2 vstack gap-4">
+              <div className="border p-4">
+                (code)
+              </div>
+            </div>
+            <div className="col-4 col-lg-2 vstack gap-4">
+              <div className="border p-4">
+                (placeholder)
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
