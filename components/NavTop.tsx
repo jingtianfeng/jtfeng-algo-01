@@ -7,7 +7,7 @@ const NavTop: React.FC<{}> = () => {
         <div className="row gy-2">
           <div className="col-4 col-md-1">
             <Link href="/">
-              <a>DS/Algo in TypeScipt</a>
+              <a>DS/Algo in TypeScript</a>
             </Link>
           </div>
           <div className="col-4 col-md-3">
