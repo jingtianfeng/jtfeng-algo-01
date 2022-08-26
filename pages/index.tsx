@@ -11,10 +11,10 @@ const Home: NextPage<Props> = ({code}) => {
   return (
     <>
       <Head>
-        <title>DS/Algo Study</title>
+        <title>DS/Algo in TypeScript</title>
         <meta
           name="description"
-          content="To showcase my data structure and algorithm solutions"
+          content="To showcase my data structure and algorithm solutions in TypeScript"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
