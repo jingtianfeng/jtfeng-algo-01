@@ -3,7 +3,11 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
-const Home: NextPage = () => {
+interface Props {
+  code: string,
+}
+
+const Home: NextPage<Props> = ({code}) => {
   return (
     <>
       <Head>
@@ -126,14 +130,9 @@ const Home: NextPage = () => {
             <div className="col-4 col-lg-2 vstack gap-4">
               <div className="border p-4">
                 <pre>
-                  (pre)
+                  <code className="language-typescript" 
+                        dangerouslySetInnerHTML={{__html: code}} />
                 </pre>
-                <code>
-                  function()
-                </code>
-                <samp>
-                  (samp)
-                </samp>
               </div>
             </div>
           </div>
@@ -141,6 +140,23 @@ const Home: NextPage = () => {
       </section>
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  // -------------------------------------------------------------------------------
+  const Prism = require("prismjs");
+  const loadLanguages = require('prismjs/components/');
+  loadLanguages(['typescript']);
+  // -------------------------------------------------------------------------------
+  const code = `
+    const data = 1;
+  `;
+  // -------------------------------------------------------------------------------
+  return {
+    props: {
+      code: Prism.highlight(code, Prism.languages.typescript, 'typescript'),
+    }
+  }
 };
 
 export default Home;
