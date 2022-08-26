@@ -145,7 +145,8 @@ const Home: NextPage<Props> = ({code}) => {
 export const getStaticProps = async () => {
   // -------------------------------------------------------------------------------
   const Prism = require("prismjs");
-  const loadLanguages = require('prismjs/components/');
+  const loadLanguages = require("prismjs/components/index");
+  require("prismjs/components/prism-typescript");
   loadLanguages(['typescript']);
   // -------------------------------------------------------------------------------
   const code = `
