@@ -4,10 +4,10 @@ import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
 interface Props {
-  code: string,
+  code: string;
 }
 
-const Home: NextPage<Props> = ({code}) => {
+const Home: NextPage<Props> = ({ code }) => {
   return (
     <>
       <Head>
@@ -107,22 +107,14 @@ const Home: NextPage<Props> = ({code}) => {
             <div className="col-4 col-lg-2 vstack gap-4">
               <div className="border p-4">
                 <dl className="row gy-2">
-                  <dt className="col-4 col-md-1">
-                    D.L.
-                  </dt>
+                  <dt className="col-4 col-md-1">D.L.</dt>
                   <dd className="col-4 col-md-3">
                     A description list is perfect for defining terms.
                   </dd>
-                  <dt className="col-4 col-md-1">
-                    D.T.
-                  </dt>
+                  <dt className="col-4 col-md-1">D.T.</dt>
                   <dd className="col-4 col-md-3">
-                    <p>
-                      Definition for the term.
-                    </p>
-                    <p>
-                      And some more placeholder definition text.
-                    </p>
+                    <p>Definition for the term.</p>
+                    <p>And some more placeholder definition text.</p>
                   </dd>
                 </dl>
               </div>
@@ -130,8 +122,10 @@ const Home: NextPage<Props> = ({code}) => {
             <div className="col-4 col-lg-2 vstack gap-4">
               <div className="border p-4">
                 <pre>
-                  <code className="language-typescript" 
-                        dangerouslySetInnerHTML={{__html: code}} />
+                  <code
+                    className="language-typescript"
+                    dangerouslySetInnerHTML={{ __html: code }}
+                  />
                 </pre>
               </div>
             </div>
@@ -147,7 +141,7 @@ export const getStaticProps = async () => {
   const Prism = require("prismjs");
   const loadLanguages = require("prismjs/components/index");
   require("prismjs/components/prism-typescript");
-  loadLanguages(['typescript']);
+  loadLanguages(["typescript"]);
   // -------------------------------------------------------------------------------
   const code = `
     const data = 1;
@@ -155,9 +149,9 @@ export const getStaticProps = async () => {
   // -------------------------------------------------------------------------------
   return {
     props: {
-      code: Prism.highlight(code, Prism.languages.typescript, 'typescript'),
-    }
-  }
+      code: Prism.highlight(code, Prism.languages.typescript, "typescript"),
+    },
+  };
 };
 
 export default Home;
