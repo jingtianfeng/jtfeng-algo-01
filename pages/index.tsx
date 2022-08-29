@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import isValid from "../solutions/leetcode/20-valid-parentheses";
 
 interface Props {
   code: string;
@@ -143,9 +144,7 @@ export const getStaticProps = async () => {
   require("prismjs/components/prism-typescript");
   loadLanguages(["typescript"]);
   // -------------------------------------------------------------------------------
-  const code = `
-    const data = 1;
-  `;
+  const code = isValid.toString();
   // -------------------------------------------------------------------------------
   return {
     props: {
