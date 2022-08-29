@@ -42,7 +42,7 @@ const isValid = (s: string): boolean => {
 			console.log("stkBracket: ", stkBracket);
 			const char = s.charAt(i);
 			if (
-				arrBracketStarting.includes(char) === false || 
+				arrBracketStarting.includes(char) === false && 
 				arrBracketClosing.includes(char) === false
 			) {
 				console.log(`CHARACTER AT INDEX ${i} IS NON-BRACKET`);
