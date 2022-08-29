@@ -22,10 +22,10 @@ const isValid = (s: string): boolean => {
 	} else if (s.length === 1) {
 		console.log("S ONLY HAS 1 BRACKET");
 		return false;
-	} else if (['(', '{', '['].includes(s.charAt(0))) {
+	} else if ([')', '}', ']'].includes(s.charAt(0))) {
 		console.log("S STARTS WITH A CLOSING BRACKET");
 		return false;
-	} else if ([')', '}', ']'].includes(s.charAt(0)) === false) {
+	} else if (['(', '{', '['].includes(s.charAt(0)) === false) {
 		console.log("S STARTS WITH A NON-BRACKET CHARACTER");
 		return false;
 	} else {
