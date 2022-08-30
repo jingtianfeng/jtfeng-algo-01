@@ -19,7 +19,7 @@ const Home: NextPage<Props> = ({ code }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header id="index-header">
+      <header id="leetcode-20-question">
         <div className="container py-7">
           <div className="prose">
             <h1 className="text-capitalize">
@@ -44,7 +44,7 @@ const Home: NextPage<Props> = ({ code }) => {
           </div>
         </div>
       </header>
-      <section id="index-solution" className="border-top">
+      <section id="leetcode-20-solution" className="border-top">
         <div className="container py-7">
           <pre>
             <code
