@@ -46,6 +46,9 @@ const Home: NextPage<Props> = ({ code }) => {
       </header>
       <section id="leetcode-20-solution" className="border-top">
         <div className="container py-7">
+          <h2 className="mb-4">
+            Solution
+          </h2>
           <pre>
             <code
               className="language-typescript"
