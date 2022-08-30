@@ -10,7 +10,7 @@ const NavTop: React.FC<{}> = () => {
               <a>DS/Algo in TypeScript</a>
             </Link>
           </div>
-          <div className="col-4 col-md-1 text-end">
+          <div className="col-4 col-md-1 text-md-end">
             <Link href="#footer__sitemap__leetcode">
               <a>LeetCode</a>
             </Link>
