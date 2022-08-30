@@ -9,7 +9,7 @@ const isValid = (s: string): boolean => {
 	// then             return false
 	// else if          s starts with a closing bracket
 	// then             return false
-	// else	if          s starts with NOT a starting bracket
+	// else if          s starts with NOT a starting bracket
 	// then             return false
 	// else             ...
 	// ----------------------------------------------------------------------------
