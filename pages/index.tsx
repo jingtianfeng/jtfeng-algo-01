@@ -1,12 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 
-interface Props {
-  code: string;
-}
-
-const Index: NextPage<Props> = ({ code }) => {
+const Index: NextPage = () => {
   return (
     <>
       <Head>
