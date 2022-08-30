@@ -41,15 +41,19 @@ const Home: NextPage<Props> = ({ code }) => {
               <li>Open brackets must be closed in the correct order.</li>
               <li>Every close bracket has a corresponding open bracket of the same type.</li>
             </ol>
-            <pre>
-              <code
-                className="language-typescript"
-                dangerouslySetInnerHTML={{ __html: code }}
-              />
-            </pre>
           </div>
         </div>
       </header>
+      <section id="index-solution" className="border-top">
+        <div className="container py-7">
+          <pre>
+            <code
+              className="language-typescript"
+              dangerouslySetInnerHTML={{ __html: code }}
+            />
+          </pre>
+        </div>
+      </section>
     </>
   );
 };
