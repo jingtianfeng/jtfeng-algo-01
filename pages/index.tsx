@@ -28,20 +28,4 @@ const Home: NextPage<Props> = ({ code }) => {
   );
 };
 
-export const getStaticProps = async () => {
-  // -------------------------------------------------------------------------------
-  const Prism = require("prismjs");
-  const loadLanguages = require("prismjs/components/index");
-  require("prismjs/components/prism-typescript");
-  loadLanguages(["typescript"]);
-  // -------------------------------------------------------------------------------
-  const code = isValid.toString();
-  // -------------------------------------------------------------------------------
-  return {
-    props: {
-      code: Prism.highlight(code, Prism.languages.typescript, "typescript"),
-    },
-  };
-};
-
 export default Home;
