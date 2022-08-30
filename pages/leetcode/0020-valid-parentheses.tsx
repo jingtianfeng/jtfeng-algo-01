@@ -70,7 +70,7 @@ export const getStaticProps = async () => {
   // -------------------------------------------------------------------------------
   const fs = require("fs/promises");
   const code = await fs.readFile(
-    "/home/jtfeng/frontend/personal/jtfeng-algo-01/solutions/leetcode/0020-valid-parentheses.ts",
+    "solutions/leetcode/0020-valid-parentheses.ts",
     { encoding: "utf-8" }
   );
   // -------------------------------------------------------------------------------
