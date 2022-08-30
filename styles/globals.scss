@@ -345,4 +345,30 @@ pre {
 // =================================================================================
 // 5. NON-BOOTSTRAP
 // ---------------------------------------------------------------------------------
+.prose {
+  max-width: 120ch;
+
+  h1 {
+    margin-bottom: $spacer * $spacer-ratio;
+  }
+
+  p + p {
+    margin-top: $spacer * $spacer-ratio-half;
+  }
+
+  strong {
+    font-weight: 800;
+  }
+
+  ol, ul {
+    padding-left: $spacer * $spacer-ratio;
+    padding-top: $spacer * $spacer-ratio-half;
+    padding-bottom: $spacer * $spacer-ratio;
+  }
+
+  li + li {
+    margin-top: $spacer * $spacer-ratio-half;
+  }
+}
+// ---------------------------------------------------------------------------------
 @import "prismjs/themes/prism-dark.css";
