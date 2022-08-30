@@ -15,7 +15,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
         <meta name="description" content="LeetCode 20: Valid Parentheses" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header id="leetcode-20-question">
+      <header id="leetcode-0020-question">
         <div className="container py-7">
           <div className="prose">
             <h1 className="text-capitalize">Valid parentheses</h1>
@@ -43,7 +43,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
           </div>
         </div>
       </header>
-      <section id="leetcode-20-solution" className="border-top">
+      <section id="leetcode-0020-solution" className="border-top">
         <div className="container py-7">
           <h2 className="mb-4">Solution</h2>
           <pre>
@@ -54,7 +54,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
           </pre>
         </div>
       </section>
-      <section id="leetcode-20-results" className="border-top">
+      <section id="leetcode-0020-results" className="border-top">
         <div className="container py-7">
           <h2>Results</h2>
         </div>
