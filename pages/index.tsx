@@ -21,16 +21,16 @@ const Home: NextPage<Props> = ({ code }) => {
       </Head>
       <header id="index-header">
         <div className="container py-7">
-          <div class="prose">
+          <div className="prose">
             <h1 className="text-capitalize">
               20. Valid parentheses
             </h1>
             <p>
-              Given a string <code class="language-typescipt">s</code> 
+              Given a string <code className="language-typescipt">s</code> 
               containing just the characters 
-              <code class="language-typescipt">( )</code>
-              <code class="language-typescipt">{'{'} {'}'}</code>
-              <code class="language-typescipt">[ ]</code>
+              <code className="language-typescipt">( )</code>
+              <code className="language-typescipt">{'{'} {'}'}</code>
+              <code className="language-typescipt">[ ]</code>
               , determine if the input string is valid.
             </p>
             <p>
