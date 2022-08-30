@@ -4,14 +4,18 @@ const Footer: React.FC<{}> = () => {
   return (
     <footer id="footer" className="border-top">
       <div className="container py-7">
-        <h2 className="border">
-          (section title)
+        <h2 className="visually-hidden">
+          Footer
         </h2>
+        <h3 id="footer__sitemap" 
+            className="visually-hidden">
+          Sitemap
+        </h3>
         <div className="row">
           <div className="col-4">
-            <h3 id="footer__sitemap__leetcode" className="mb-2">
+            <h4 id="footer__sitemap__leetcode" className="mb-2">
               LeetCode
-            </h3>
+            </h4>
             <ul className="list-unstyled">
               <li>
                 <Link href="/leetcode/0020-valid-parentheses">
