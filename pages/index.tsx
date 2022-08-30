@@ -22,9 +22,7 @@ const Home: NextPage<Props> = ({ code }) => {
       </Head>
       <header id="leetcode-20-question">
         <div className="container py-7">
-          <Link href="/leetcode/20-valid-parentheses">
-            <a>0020 - valid parentheses</a>
-          </Link>
+          <h2 className="border">(section title)</h2>
         </div>
       </header>
     </>
