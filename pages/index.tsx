@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
-import isValid from "../solutions/leetcode/20-valid-parentheses";
 import Link from "next/link";
 
 interface Props {
