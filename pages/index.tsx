@@ -1,14 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.scss";
 import Link from "next/link";
 
 interface Props {
   code: string;
 }
 
-const Home: NextPage<Props> = ({ code }) => {
+const Index: NextPage<Props> = ({ code }) => {
   return (
     <>
       <Head>
@@ -19,7 +17,7 @@ const Home: NextPage<Props> = ({ code }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header id="leetcode-20-question">
+      <header id="index-question">
         <div className="container py-7">
           <h2 className="border">(section title)</h2>
         </div>
@@ -28,4 +26,4 @@ const Home: NextPage<Props> = ({ code }) => {
   );
 };
 
-export default Home;
+export default Index;
