@@ -23,7 +23,7 @@ const Home: NextPage<Props> = ({ code }) => {
         <div className="container py-7">
           <div className="prose">
             <h1 className="text-capitalize">
-              20. Valid parentheses
+              Valid parentheses
             </h1>
             <p>
               Given a string <code className="language-typescipt">s</code> 
