@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import isValid from "../../solutions/leetcode/20-valid-parentheses";
 
 interface Props {
   code: string;
@@ -70,7 +68,11 @@ export const getStaticProps = async () => {
   require("prismjs/components/prism-typescript");
   loadLanguages(["typescript"]);
   // -------------------------------------------------------------------------------
-  const code = isValid.toString();
+  const fs = require("fs/promises");
+  const code = await fs.readFile(
+    "/home/jtfeng/frontend/personal/jtfeng-algo-01/solutions/leetcode/0020-valid-parentheses.ts", 
+    { encoding: "utf-8" }
+  );
   // -------------------------------------------------------------------------------
   return {
     props: {
