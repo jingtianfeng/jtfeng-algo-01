@@ -117,12 +117,12 @@ $headings-margin-bottom: 0;
 $h1-font-size: $spacer * $spacer-ratio-sqrt;
 $h1-letter-spacing: 0;
 $h1-line-height: $spacer-ratio-sqrt;
-$h1-text-transform: none;
+$h1-text-transform: capitalize;
 // ---------------------------------------------------------------------------------
 $h2-font-size: $spacer * $spacer-ratio-sqrt;
 $h2-letter-spacing: 0;
 $h2-line-height: $spacer-ratio-sqrt;
-$h2-text-transform: none;
+$h2-text-transform: capitalize;
 // ---------------------------------------------------------------------------------
 $h3-font-size: $spacer * $spacer-ratio-sqrt;
 $h3-letter-spacing: 0;
