@@ -19,11 +19,12 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
             <h1 className="text-capitalize">Valid parentheses</h1>
             <p>
               Given a string <code className="language-typescipt">s</code>
-              containing just the characters
-              <code className="language-typescipt">( )</code>
+              &nbsp;containing just the characters&nbsp;
+              <code className="language-typescipt">( )</code>&nbsp;
               <code className="language-typescipt">
                 {"{"} {"}"}
               </code>
+              &nbsp;
               <code className="language-typescipt">[ ]</code>, determine if the
               input string is valid.
             </p>
@@ -34,8 +35,8 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
               </li>
               <li>Open brackets must be closed in the correct order.</li>
               <li>
-                Every close bracket has a corresponding open bracket of the same
-                type.
+                Every closed bracket has a corresponding open bracket of the
+                same type.
               </li>
             </ol>
           </div>
