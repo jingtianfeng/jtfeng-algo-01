@@ -8,15 +8,33 @@ const Footer: React.FC<{}> = () => {
         <h3 id="footer__sitemap" className="visually-hidden">
           Sitemap
         </h3>
-        <div className="row">
-          <div className="col-4">
-            <h4 id="footer__sitemap__leetcode" className="mb-2">
+        <div className="row g-4">
+          <div className="col-4 col-md-1">
+            <h4 id="footer__sitemap__leetcode">
               LeetCode
             </h4>
+          </div>
+          <div className="col-4 col-md-3">
             <ul className="list-unstyled">
               <li>
                 <Link href="/leetcode/0020-valid-parentheses">
                   <a>0020 - valid parentheses</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="row g-4 mt-4">
+          <div className="col-4 col-md-1">
+            <h4 id="footer__sitemap__misc">
+              Misc
+            </h4>
+          </div>
+          <div className="col-4 col-md-3">
+            <ul className="list-unstyled">
+              <li>
+                <Link href="/">
+                  <a>back to home</a>
                 </Link>
               </li>
             </ul>
