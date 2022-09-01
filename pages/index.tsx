@@ -20,22 +20,20 @@ const Index: NextPage = () => {
             </div>
             <div className="col-4 col-md-3">
               <div className="prose">
-                <p className="lead text-uppercase">
-                  LeetCode
-                </p>
+                <p className="lead text-uppercase">LeetCode</p>
                 <p>
-                  Hi fellow grinders! I am currently working on the 
+                  Hi fellow grinders! I am currently working on the
                   <em>Top Interview Questions</em> list:
                 </p>
                 <ul>
-                  <li><s>0020 - Valid Parentheses</s></li>
+                  <li>
+                    <s>0020 - Valid Parentheses</s>
+                  </li>
                   <li>0013 - Roman to Integer</li>
                   <li>0014 - Longest Common Prefix</li>
                   <li>0028 - Implement strStr()</li>
                 </ul>
-                <p>
-                  Links to my solutions are down in the footer section!
-                </p>
+                <p>Links to my solutions are down in the footer section!</p>
               </div>
             </div>
           </div>
