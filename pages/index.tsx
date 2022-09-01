@@ -24,7 +24,7 @@ const Index: NextPage = () => {
                   LeetCode
                 </p>
                 <p>
-                  Hi fellow grinders! I'm currently working on the 
+                  Hi fellow grinders! I am currently working on the 
                   <em>Top Interview Questions</em> list:
                 </p>
                 <ul>
