@@ -16,7 +16,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
       <header id="leetcode-0020-question">
         <div className="container py-7">
           <div className="row g-4">
-            <div className="col-4 col-md-1">
+            <div className="col-4 col-md-1 d-none d-md-block">
               <h1>Question</h1>
             </div>
             <div className="col-4 col-md-3">
@@ -54,7 +54,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
       <section id="leetcode-0020-solution" className="border-top">
         <div className="container py-7">
           <div className="row g-4">
-            <div className="col-4 col-md-1">
+            <div className="col-4 col-md-1 d-none d-md-block">
               <h2>Solution</h2>
             </div>
             <div className="col-4 col-md-3">
@@ -71,7 +71,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
       <section id="leetcode-0020-results" className="border-top">
         <div className="container py-7">
           <div className="row g-4">
-            <div className="col-4 col-md-1">
+            <div className="col-4 col-md-1 d-none d-md-block">
               <h2>Results</h2>
             </div>
             <div className="col-4 col-md-3">
