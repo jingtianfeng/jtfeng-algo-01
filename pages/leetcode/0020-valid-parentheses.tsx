@@ -20,10 +20,8 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
               <h1>Question</h1>
             </div>
             <div className="col-4 col-md-3">
-              <div className='prose'>
-                <p className="lead text-uppercase">
-                  Valid parentheses
-                </p>
+              <div className="prose">
+                <p className="lead text-uppercase">Valid parentheses</p>
                 <p>
                   Given a string <code className="language-typescipt">s</code>
                   &nbsp;containing just the characters&nbsp;
@@ -32,8 +30,8 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
                     {"{"} {"}"}
                   </code>
                   &nbsp;
-                  <code className="language-typescipt">[ ]</code>, determine if the
-                  input string is valid.
+                  <code className="language-typescipt">[ ]</code>, determine if
+                  the input string is valid.
                 </p>
                 <p>An input string is valid if:</p>
                 <ol>
