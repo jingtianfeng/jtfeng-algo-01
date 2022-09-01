@@ -68,20 +68,6 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
           </div>
         </div>
       </section>
-      <section id="leetcode-0020-results" className="border-top">
-        <div className="container py-7">
-          <div className="row g-4">
-            <div className="col-4 col-md-1 d-none d-md-block">
-              <h2>Results</h2>
-            </div>
-            <div className="col-4 col-md-3">
-              <div className="border">
-                (placeholder)
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 };
