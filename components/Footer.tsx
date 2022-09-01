@@ -10,9 +10,7 @@ const Footer: React.FC<{}> = () => {
         </h3>
         <div className="row g-4">
           <div className="col-4 col-md-1">
-            <h4 id="footer__sitemap__leetcode">
-              LeetCode
-            </h4>
+            <h4 id="footer__sitemap__leetcode">LeetCode</h4>
           </div>
           <div className="col-4 col-md-3">
             <ul className="list-unstyled">
@@ -26,9 +24,7 @@ const Footer: React.FC<{}> = () => {
         </div>
         <div className="row g-4 mt-4">
           <div className="col-4 col-md-1">
-            <h4 id="footer__sitemap__misc">
-              Misc
-            </h4>
+            <h4 id="footer__sitemap__misc">Misc</h4>
           </div>
           <div className="col-4 col-md-3">
             <ul className="list-unstyled">
