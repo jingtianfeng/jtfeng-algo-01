@@ -33,7 +33,7 @@ const Index: NextPage = () => {
                   <li>0014 - Longest Common Prefix</li>
                   <li>0028 - Implement strStr()</li>
                 </ul>
-                <p>Links to my solutions are down in the footer section!</p>
+                <p>Links to my solutions are in the footer section below!</p>
               </div>
             </div>
           </div>
