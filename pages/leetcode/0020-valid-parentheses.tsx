@@ -9,9 +9,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
   return (
     <>
       <Head>
-        <title>LeetCode 20: Valid Parentheses</title>
-        <meta name="description" content="LeetCode 20: Valid Parentheses" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>LeetCode 0020: Valid Parentheses</title>
       </Head>
       <header id="leetcode-0020-question">
         <div className="container py-7">
