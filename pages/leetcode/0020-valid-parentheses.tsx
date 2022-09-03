@@ -19,7 +19,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
             </div>
             <div className="col-4 col-md-3">
               <div className="prose">
-                <p className="lead text-uppercase">Valid parentheses</p>
+                <p className="lead text-uppercase">0020 - valid parentheses</p>
                 <p>
                   Given a string <code className="language-typescipt">s</code>
                   &nbsp;containing just the characters&nbsp;
