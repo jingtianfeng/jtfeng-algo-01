@@ -15,7 +15,7 @@ const Index: NextPage = () => {
       <header id="index-status">
         <div className="container py-7">
           <div className="row g-4">
-            <div className="col-4 col-md-1">
+            <div className="col-4 col-md-1 d-none d-md-block">
               <h2>Status</h2>
             </div>
             <div className="col-4 col-md-3">
