@@ -126,6 +126,16 @@ const isValid = (s: string): boolean => {
     //                CLOSED BRACKET DOES NOT MATCH OPEN BRACKET
     //                return false
     //
+    // ----------------------------------------------------------------------------
+    //
+    // OBSERVATIONS   After iterating through s, there are 2 possible outcomes:
+    //                  1. stkBracket is empty     -> return true
+    //                  2. stkBracket is NOT empty -> return false
+    //
+    // SPACE          O(n)
+    // TIME           O(n)
+    // worst-case     ([{([{([{([{([{([{([{([{([{([{([{([{([{([{...
+    //
     // ============================================================================
     // 3. Define isValid
     // ----------------------------------------------------------------------------
