@@ -13,7 +13,7 @@ const isValid = (s: string): boolean => {
   // then             return false
   // else             ...
   // ----------------------------------------------------------------------------
-  // OBSERVATIONS     at this point, s is guaranteed to start with an
+  // OBSERVATIONS     At this point, s is guaranteed to start with an
   //                  open bracket, and to have a 2nd character.
   // ----------------------------------------------------------------------------
   if (s.length === 0) {
@@ -33,6 +33,27 @@ const isValid = (s: string): boolean => {
     // 2. Try examples
     // ----------------------------------------------------------------------------
     //
+    // DATA STRUCT.   This question reminds me of a call stack:
+    //                {
+    //                    {
+    //                        {
+    //                            ...
+    //                        }
+    //                    }
+    //                }
+    //                where each open bracket must be closed,
+    //                or the compiler will throw an error.
+    //
+    //                Additionally, there are 3 types of brackets: () [] {}
+    //                and each open bracket must be closed by its match.
+    //
+    //                Let us use an array that serves as a stack to:
+    //                  1. push open brackets
+    //                  2. pop matching open-closed brackets
+    //                  3. handle non-matching brackets
+    //                  4. handle edge cases such as non-bracket characters
+    //
+    // ----------------------------------------------------------------------------
     //
     // s              (    )
     //                -
@@ -51,9 +72,7 @@ const isValid = (s: string): boolean => {
     //                ALL BRACKETS MATCH
     //                return true
     //
-    //
     // ----------------------------------------------------------------------------
-    //
     //
     // s              (    )    [    ]    {    }
     //                -
@@ -94,9 +113,7 @@ const isValid = (s: string): boolean => {
     //                ALL BRACKETS MATCH
     //                return true
     //
-    //
     // ----------------------------------------------------------------------------
-    //
     //
     // s              (    ]
     //                -
@@ -108,7 +125,6 @@ const isValid = (s: string): boolean => {
     // stkBracket     (    ]
     //                CLOSED BRACKET DOES NOT MATCH OPEN BRACKET
     //                return false
-    //
     //
     // ============================================================================
     // 3. Define isValid
