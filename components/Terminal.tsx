@@ -1,4 +1,3 @@
-import { Terminal as XTerm } from "xterm";
 import { useEffect } from "react";
 
 const Terminal = () => {
