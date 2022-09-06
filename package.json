@@ -15,7 +15,8 @@
     "prettier": "^2.7.1",
     "prismjs": "^1.29.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "xterm": "^4.19.0"
   },
   "devDependencies": {
     "@types/node": "18.7.5",
