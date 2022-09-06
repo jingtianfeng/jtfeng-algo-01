@@ -4,7 +4,7 @@ const Terminal = () => {
   useEffect(() => {
     const initTerminal = async () => {
       const { Terminal } = await import("xterm");
-      const { FitAddon } = await import('xterm-addon-fit');
+      const { FitAddon } = await import("xterm-addon-fit");
       const xTerm = new Terminal();
       const addonFit = new FitAddon();
       xTerm.loadAddon(addonFit);
