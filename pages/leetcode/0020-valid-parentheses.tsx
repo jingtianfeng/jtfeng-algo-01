@@ -72,7 +72,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
               <h2>Testing</h2>
             </div>
             <div className="col-4 col-md-3">
-              <Terminal/>
+              <Terminal />
             </div>
           </div>
         </div>
