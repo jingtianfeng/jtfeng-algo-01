@@ -11,7 +11,7 @@ const NavTop: React.FC<{}> = () => {
             </Link>
           </div>
           <div className="col-4 col-md-1 text-md-end">
-            <Link href="#footer__sitemap__leetcode">
+            <Link href="#footer__sitemap">
               <a>Solutions</a>
             </Link>
           </div>
