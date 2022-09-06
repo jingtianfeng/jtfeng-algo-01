@@ -4,8 +4,12 @@ const Terminal = () => {
   useEffect(() => {
     const initTerminal = async () => {
       const { Terminal } = await import("xterm");
+      const { FitAddon } = await import('xterm-addon-fit');
       const xTerm = new Terminal();
-      xTerm.open(document.getElementById("terminal"));
+      const addonFit = new FitAddon();
+      xTerm.loadAddon(addonFit);
+      xTerm.open(document.getElementById("terminal") as HTMLDivElement);
+      addonFit.fit();
     };
     initTerminal();
   }, []);
