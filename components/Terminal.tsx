@@ -5,7 +5,9 @@ const Terminal = () => {
     const initTerminal = async () => {
       const { Terminal } = await import("xterm");
       const { FitAddon } = await import("xterm-addon-fit");
-      const xTerm = new Terminal();
+      const xTerm = new Terminal({
+        cursorBlink: "block",
+      });
       const addonFit = new FitAddon();
       xTerm.loadAddon(addonFit);
       xTerm.open(document.getElementById("terminal") as HTMLDivElement);
