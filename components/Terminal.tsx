@@ -6,7 +6,7 @@ const Terminal = () => {
       const { Terminal } = await import("xterm");
       const { FitAddon } = await import("xterm-addon-fit");
       const xTerm = new Terminal({
-        cursorBlink: "block",
+        cursorBlink: true,
       });
       const addonFit = new FitAddon();
       xTerm.loadAddon(addonFit);
