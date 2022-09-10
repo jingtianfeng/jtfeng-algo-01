@@ -1,12 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Terminal from "../../components/Terminal";
+import { useEffect } from "react";
+import isValid from "../../solutions/leetcode/0020-valid-parentheses";
 
 interface Props {
   code: string;
 }
 
 const ValidParentheses: NextPage<Props> = ({ code }) => {
+  useEffect(() => {
+    window.isValid = isValid;
+  }, []);
   return (
     <>
       <Head>
