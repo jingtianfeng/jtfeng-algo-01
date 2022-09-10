@@ -8,6 +8,12 @@ interface Props {
   code: string;
 }
 
+declare global {
+  interface Window {
+    isValid: (s: string) => boolean;
+  }
+}
+
 const ValidParentheses: NextPage<Props> = ({ code }) => {
   useEffect(() => {
     window.isValid = isValid;
