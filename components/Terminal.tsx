@@ -18,7 +18,9 @@ const Terminal = () => {
       xTerm.onKey(({ key, domEvent }) => {
         console.log("domEvent\t\t", domEvent);
         if (domEvent.code === "Enter") {
-          const fnResult = new Function(`return ${lineCurr}`);
+          const fnResult = new Function(
+            `try {${lineCurr}} catch (e) {return e.toString()}`
+          );
           const strResult = fnResult().toString();
           xTerm.write("\r\n" + strResult);
           xTerm.write("\r\n" + prefix);
@@ -30,16 +32,16 @@ const Terminal = () => {
           domEvent.code.slice(0, 3) === "Key" ||
           domEvent.code.slice(0, 5) === "Digit" ||
           domEvent.code === "Quote" ||
-          domEvent.code === 'Space' ||
-          domEvent.code === 'Minus' ||
-          domEvent.code === 'Equal' ||
-          domEvent.code === 'Backquote' ||
-          domEvent.code === 'Semicolon' ||
-          domEvent.code === 'Slash' ||
-          domEvent.code === 'Backslash' ||
-          domEvent.code === 'Comma' ||
-          domEvent.code === 'Period' ||
-          domEvent.code.slice(0, 7) === 'Bracket'
+          domEvent.code === "Space" ||
+          domEvent.code === "Minus" ||
+          domEvent.code === "Equal" ||
+          domEvent.code === "Backquote" ||
+          domEvent.code === "Semicolon" ||
+          domEvent.code === "Slash" ||
+          domEvent.code === "Backslash" ||
+          domEvent.code === "Comma" ||
+          domEvent.code === "Period" ||
+          domEvent.code.slice(0, 7) === "Bracket"
         ) {
           lineCurr += key;
           xTerm.write(key);
