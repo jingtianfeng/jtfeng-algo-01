@@ -23,12 +23,9 @@ const Terminal = () => {
           xTerm.write("\r\n" + strResult);
           xTerm.write("\r\n" + prefix);
           lineCurr = "";
-        } else if (
-          domEvent.code === 'Backspace' && 
-          lineCurr.length > 0
-        ) {
+        } else if (domEvent.code === "Backspace" && lineCurr.length > 0) {
           lineCurr = lineCurr.slice(0, -1);
-          xTerm.write('\b \b');
+          xTerm.write("\b \b");
         } else {
           lineCurr += key;
           xTerm.write(key);
