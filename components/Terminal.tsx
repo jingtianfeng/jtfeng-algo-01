@@ -36,7 +36,9 @@ const Terminal = () => {
           domEvent.code === 'Backquote' ||
           domEvent.code === 'Semicolon' ||
           domEvent.code === 'Slash' ||
-          domEvent.code === 'Backslash'
+          domEvent.code === 'Backslash' ||
+          domEvent.code === 'Comma' ||
+          domEvent.code === 'Period'
         ) {
           lineCurr += key;
           xTerm.write(key);
