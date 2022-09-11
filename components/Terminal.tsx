@@ -26,7 +26,11 @@ const Terminal = () => {
         } else if (domEvent.code === "Backspace" && lineCurr.length > 0) {
           lineCurr = lineCurr.slice(0, -1);
           xTerm.write("\b \b");
-        } else {
+        } else if (
+          domEvent.code.slice(0, 3) === "Key" ||
+          domEvent.code.slice(0, 5) === "Digit" ||
+          domEvent.code === "Quote"
+        ) {
           lineCurr += key;
           xTerm.write(key);
         }
