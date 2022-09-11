@@ -19,7 +19,7 @@ const Terminal = () => {
         console.log("domEvent\t\t", domEvent);
         if (domEvent.code === "Enter") {
           const fnResult = new Function(
-            `try {${lineCurr}} catch (e) {return e.toString()}`
+            `try {return ${lineCurr}} catch (e) {return e}`
           );
           const strResult = fnResult().toString();
           xTerm.write("\r\n" + strResult);
