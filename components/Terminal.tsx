@@ -38,7 +38,8 @@ const Terminal = () => {
           domEvent.code === 'Slash' ||
           domEvent.code === 'Backslash' ||
           domEvent.code === 'Comma' ||
-          domEvent.code === 'Period'
+          domEvent.code === 'Period' ||
+          domEvent.code.slice(0, 7) === 'Bracket'
         ) {
           lineCurr += key;
           xTerm.write(key);
