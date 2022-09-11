@@ -15,6 +15,13 @@ const Terminal = () => {
       window.onerror = (e) => {
         console.log(e.toString());
       };
+      console.log = (...arrMsg) => {
+        let strMsg = "";
+        for (let i = 0; i < arrMsg.length; i++) {
+          strMsg += JSON.stringify(arrMsg[i]).slice(1, -1);
+        }
+        xTerm.write("\r\n" + strMsg);
+      };
       const prefix = "Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ";
       xTerm.write(prefix);
       let lineCurr = "";
