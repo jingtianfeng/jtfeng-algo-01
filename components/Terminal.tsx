@@ -32,7 +32,9 @@ const Terminal = () => {
           domEvent.code === "Quote" ||
           domEvent.code === 'Space' ||
           domEvent.code === 'Minus' ||
-          domEvent.code === 'Equal'
+          domEvent.code === 'Equal' ||
+          domEvent.code === 'Backquote' ||
+          domEvent.code === 'Semicolon'
         ) {
           lineCurr += key;
           xTerm.write(key);
