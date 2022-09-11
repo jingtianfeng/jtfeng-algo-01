@@ -31,7 +31,13 @@ const Terminal = () => {
           const fnResult = new Function(
             `try {return ${lineCurr}} catch (e) {return e}`
           );
-          const strResult = fnResult().toString();
+          const retvalResult = fnResult();
+          const strResult =
+            retvalResult === undefined
+              ? "undefined"
+              : retvalResult === null
+              ? "null"
+              : retvalResult.toString();
           xTerm.write("\r\n" + strResult);
           xTerm.write("\r\n" + prefix);
           lineCurr = "";
