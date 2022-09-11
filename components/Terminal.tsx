@@ -26,7 +26,7 @@ const Terminal = () => {
       xTerm.write(prefix);
       let lineCurr = "";
       xTerm.onKey(({ key, domEvent }) => {
-        console.log("domEvent\t\t", domEvent);
+        // console.log("domEvent\t\t", domEvent);
         if (domEvent.code === "Enter") {
           const fnResult = new Function(
             `try {return ${lineCurr}} catch (e) {return e}`
