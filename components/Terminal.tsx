@@ -30,7 +30,9 @@ const Terminal = () => {
           domEvent.code.slice(0, 3) === "Key" ||
           domEvent.code.slice(0, 5) === "Digit" ||
           domEvent.code === "Quote" ||
-          domEvent.code === 'Space'
+          domEvent.code === 'Space' ||
+          domEvent.code === 'Minus' ||
+          domEvent.code === 'Equal'
         ) {
           lineCurr += key;
           xTerm.write(key);
