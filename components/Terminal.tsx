@@ -39,7 +39,7 @@ const Terminal = () => {
               ? "undefined"
               : retvalResult === null
               ? "null"
-              : retvalResult.toString();
+              : "RETURN " + retvalResult.toString();
           xTerm.write("\r\n" + strResult);
           xTerm.write("\r\n" + prefix);
           lineCurr = "";
