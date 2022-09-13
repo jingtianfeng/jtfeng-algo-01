@@ -1,6 +1,6 @@
-const SectionSolution = () => {
+const SectionSolution = ({ code }) => {
   return (
-    <section id="leetcode-0020-solution" className="border-top">
+    <section id="section-solution" className="border-top">
       <div className="container py-7">
         <div className="row g-4">
           <div className="col-4 col-md-1 d-none d-md-block">
