@@ -1,4 +1,10 @@
-const SectionHeader = ({ heading, children }) => {
+const SectionHeader = ({
+  heading,
+  children,
+}: {
+  heading: string;
+  children: React.ReactNode;
+}) => {
   return (
     <header id={"section-" + heading.toLowerCase()}>
       <div className="container py-7">
