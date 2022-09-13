@@ -6,6 +6,7 @@ import isValid from "../../solutions/leetcode/0020-valid-parentheses";
 import SectionHeader from "../../components/SectionHeader";
 import SectionSolution from "../../components/SectionSolution";
 import SectionTesting from "../../components/SectionTesting";
+import utilGetStaticProps from "../../utils/getStaticProps";
 
 interface Props {
   code: string;
@@ -55,24 +56,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
   );
 };
 
-export const getStaticProps = async () => {
-  // -------------------------------------------------------------------------------
-  const Prism = require("prismjs");
-  const loadLanguages = require("prismjs/components/index");
-  require("prismjs/components/prism-typescript");
-  loadLanguages(["typescript"]);
-  // -------------------------------------------------------------------------------
-  const fs = require("fs/promises");
-  const code = await fs.readFile(
-    "solutions/leetcode/0020-valid-parentheses.ts",
-    { encoding: "utf-8" }
-  );
-  // -------------------------------------------------------------------------------
-  return {
-    props: {
-      code: Prism.highlight(code, Prism.languages.typescript, "typescript"),
-    },
-  };
-};
+export const getStaticProps = async () =>
+  await utilGetStaticProps("leetcode/0020-valid-parentheses");
 
 export default ValidParentheses;
