@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Terminal from "../components/Terminal";
 
 const Index: NextPage = () => {
   return (
@@ -39,6 +40,18 @@ const Index: NextPage = () => {
           </div>
         </div>
       </header>
+      <section id="index-playground" className="border-top">
+        <div className="container py-7">
+          <div className="row g-4">
+            <div className="col-4 col-md-1 d-none d-md-block">
+              <h2>Playground</h2>
+            </div>
+            <div className="col-4 col-md-3">
+              <Terminal />
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
