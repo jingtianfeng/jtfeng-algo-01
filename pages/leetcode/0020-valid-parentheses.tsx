@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import isValid from "../../solutions/leetcode/0020-valid-parentheses";
 import SectionHeader from "../../components/SectionHeader";
 import SectionSolution from "../../components/SectionSolution";
+import SectionTesting from "../../components/SectionTesting";
 
 interface Props {
   code: string;
@@ -49,18 +50,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
         </ol>
       </SectionHeader>
       <SectionSolution code={code} />
-      <section id="leetcode-0020-testing" className="border-top">
-        <div className="container py-7">
-          <div className="row g-4">
-            <div className="col-4 col-md-1 d-none d-md-block">
-              <h2>Testing</h2>
-            </div>
-            <div className="col-4 col-md-3">
-              <Terminal />
-            </div>
-          </div>
-        </div>
-      </section>
+      <SectionTesting />
     </>
   );
 };
