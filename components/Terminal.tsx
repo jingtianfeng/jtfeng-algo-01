@@ -36,9 +36,9 @@ const Terminal = () => {
           const retvalResult = fnResult();
           const strResult =
             retvalResult === undefined
-              ? "undefined"
+              ? "RETURN undefined"
               : retvalResult === null
-              ? "null"
+              ? "RETURN null"
               : "RETURN " + retvalResult.toString();
           xTerm.write("\r\n" + strResult);
           xTerm.write("\r\n" + prefix);
