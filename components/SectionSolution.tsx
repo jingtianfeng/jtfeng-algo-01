@@ -1,4 +1,4 @@
-const SectionSolution = ({ code }) => {
+const SectionSolution = ({ code }: { code: string }) => {
   return (
     <section id="section-solution" className="border-top">
       <div className="container py-7">
