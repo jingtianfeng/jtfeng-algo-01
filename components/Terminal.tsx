@@ -35,7 +35,9 @@ const Terminal = () => {
           );
           const retvalResult = fnResult();
           const strResult =
-            retvalResult === undefined
+            retvalResult instanceof Error
+              ? "RAISE " + retvalResult.toString()
+              : retvalResult === undefined
               ? "RETURN undefined"
               : retvalResult === null
               ? "RETURN null"
