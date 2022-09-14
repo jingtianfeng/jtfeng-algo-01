@@ -21,9 +21,6 @@ const Terminal = () => {
         }
         xTerm.write("\r\n" + strMsg);
       };
-      window.addEventListener("error", (eventError) => {
-        console.log("RAISE " + eventError.message);
-      });
       const prefix = "Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ";
       xTerm.write(prefix);
       let lineCurr = "";
@@ -66,6 +63,11 @@ const Terminal = () => {
           lineCurr += key;
           xTerm.write(key);
         }
+      });
+      window.addEventListener("error", (eventError) => {
+        console.log("RAISE " + eventError.message);
+        xTerm.write("\r\n" + prefix);
+        lineCurr = "";
       });
     };
     initTerminal();
