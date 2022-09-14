@@ -12,9 +12,6 @@ const Terminal = () => {
       xTerm.loadAddon(addonFit);
       xTerm.open(document.getElementById("terminal") as HTMLDivElement);
       addonFit.fit();
-      window.onerror = (e) => {
-        console.log(e.toString());
-      };
       console.log = (...arrMsg) => {
         let strMsg = "";
         for (let i = 0; i < arrMsg.length; i++) {
@@ -24,6 +21,9 @@ const Terminal = () => {
         }
         xTerm.write("\r\n" + strMsg);
       };
+      window.addEventListener("error", (event) => {
+        console.log(event.toString());
+      });
       const prefix = "Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ";
       xTerm.write(prefix);
       let lineCurr = "";
