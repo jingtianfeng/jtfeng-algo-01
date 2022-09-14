@@ -9,5 +9,5 @@
 
 ## Next Steps
 
-- [ ] Wireframing
-- [ ] Core features
+- [ ] Test LeetCode solutions
+- [ ] xTerm.js flow control
