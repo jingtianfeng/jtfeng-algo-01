@@ -65,9 +65,15 @@ const Terminal = () => {
         }
       });
       window.addEventListener("error", (eventError) => {
-        console.log("RAISE " + eventError.message);
-        xTerm.write("\r\n" + prefix);
-        lineCurr = "";
+        eventError.preventDefault();
+        if (eventError.hasBeenCaught !== undefined) {
+          return false;
+        } else {
+          event.hasBeenCaught = true;
+          console.log("RAISE " + eventError.message);
+          xTerm.write("\r\n" + prefix);
+          lineCurr = "";
+        }
       });
     };
     initTerminal();
