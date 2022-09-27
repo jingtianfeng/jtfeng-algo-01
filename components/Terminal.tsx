@@ -23,9 +23,10 @@ const Terminal = () => {
       };
       const prefix = "Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ";
       xTerm.write(prefix);
+      let linePrev = "";
       let lineCurr = "";
+      let codePrev = "";
       xTerm.onKey(({ key, domEvent }) => {
-        // console.log("domEvent\t\t", domEvent);
         if (domEvent.code === "Enter") {
           const fnResult = new Function(
             `try {return ${lineCurr}} catch (e) {return e}`
@@ -41,7 +42,9 @@ const Terminal = () => {
               : "RETURN " + retvalResult.toString();
           xTerm.write("\r\n" + strResult);
           xTerm.write("\r\n" + prefix);
+          linePrev = lineCurr;
           lineCurr = "";
+          codePrev = "Enter";
         } else if (domEvent.code === "Backspace" && lineCurr.length > 0) {
           lineCurr = lineCurr.slice(0, -1);
           xTerm.write("\b \b");
@@ -62,6 +65,10 @@ const Terminal = () => {
         ) {
           lineCurr += key;
           xTerm.write(key);
+        } else if (domEvent.code === "ArrowUp" && codePrev !== "ArrowUp") {
+          lineCurr = linePrev;
+          xTerm.write(lineCurr);
+          codePrev = "ArrowUp";
         }
       });
       window.addEventListener("error", (eventError) => {
