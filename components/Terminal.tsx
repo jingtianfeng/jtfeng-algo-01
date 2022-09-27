@@ -71,12 +71,12 @@ const Terminal = () => {
           codePrev = "ArrowUp";
         }
       });
-      window.addEventListener("error", (eventError) => {
+      window.addEventListener("error", (eventError: any) => {
         eventError.preventDefault();
         if (eventError.hasBeenCaught !== undefined) {
           return false;
         } else {
-          event.hasBeenCaught = true;
+          eventError.hasBeenCaught = true;
           console.log("RAISE " + eventError.message);
           xTerm.write("\r\n" + prefix);
           lineCurr = "";
