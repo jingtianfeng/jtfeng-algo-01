@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const Terminal = () => {
+const Terminal = ({ arrGlobal = [""] }) => {
   useEffect(() => {
     const initTerminal = async () => {
       const { Terminal } = await import("xterm");
@@ -21,7 +21,7 @@ const Terminal = () => {
         }
         xTerm.write("\r\n" + strMsg);
       };
-      const prefix = "Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ";
+      const prefix = `\x1B[1;3;31m${arrGlobal.join(" ")}\x1B[0m $ `;
       xTerm.write(prefix);
       let linePrev = "";
       let lineCurr = "";
