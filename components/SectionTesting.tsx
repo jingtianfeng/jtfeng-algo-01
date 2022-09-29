@@ -1,6 +1,6 @@
 import Terminal from "./Terminal";
 
-const SectionTesting = () => {
+const SectionTesting = ({ arrGlobal = [""] }) => {
   return (
     <section id="section-testing" className="border-top">
       <div className="container py-7">
@@ -9,7 +9,7 @@ const SectionTesting = () => {
             <h2>Testing</h2>
           </div>
           <div className="col-4 col-md-3">
-            <Terminal />
+            <Terminal arrGlobal={arrGlobal} />
           </div>
         </div>
       </div>
