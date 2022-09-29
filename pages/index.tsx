@@ -37,7 +37,7 @@ const Index: NextPage = () => {
               <h2>Playground</h2>
             </div>
             <div className="col-4 col-md-3">
-              <Terminal />
+              <Terminal arrGlobal={["window"]} />
             </div>
           </div>
         </div>
