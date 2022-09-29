@@ -51,7 +51,7 @@ const ValidParentheses: NextPage<Props> = ({ code }) => {
         </ol>
       </SectionHeader>
       <SectionSolution code={code} />
-      <SectionTesting />
+      <SectionTesting arrGlobal={["isValid"]} />
     </>
   );
 };
