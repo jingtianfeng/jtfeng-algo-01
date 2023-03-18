@@ -15,6 +15,11 @@ const Footer: React.FC<{}> = () => {
           <div className="col-4 col-md-3">
             <ul className="list-unstyled">
               <li>
+                <Link href="/leetcode/0013-roman-to-integer">
+                  <a>0013 - roman to integer</a>
+                </Link>
+              </li>
+              <li>
                 <Link href="/leetcode/0020-valid-parentheses">
                   <a>0020 - valid parentheses</a>
                 </Link>
