@@ -84,21 +84,21 @@ const RomanToInteger: NextPage<Props> = ({ code }) => {
           <div className="col col-md-2">
             <div className="py-1 px-2">
               <pre className="mb-4">
-                input: s = "III"
+                input: s = III
                 <br />
                 Output: 3
                 <br />
                 Expl: III = 3
               </pre>
               <pre className="mb-4">
-                input: s = "LVIII"
+                input: s = LVIII
                 <br />
                 Output: 58
                 <br />
                 Expl: L = 50, V = 5, III = 3
               </pre>
               <pre>
-                input: s = "MCMXCIV"
+                input: s = MCMXCIV
                 <br />
                 Output: 1994
                 <br />
