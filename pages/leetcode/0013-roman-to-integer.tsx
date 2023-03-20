@@ -29,6 +29,82 @@ const RomanToInteger: NextPage<Props> = ({ code }) => {
       </Head>
       <SectionHeader heading="Question">
         <p className="lead text-uppercase">0013 - roman to integer</p>
+        <p className="">
+          Roman numerals are represented by seven different symbols:
+          <br />
+          <code className="language-typescript">I</code>&nbsp;&nbsp;
+          <code className="language-typescript">V</code>&nbsp;&nbsp;
+          <code className="language-typescript">X</code>&nbsp;&nbsp;
+          <code className="language-typescript">L</code>&nbsp;&nbsp;
+          <code className="language-typescript">C</code>&nbsp;&nbsp;
+          <code className="language-typescript">D</code>&nbsp;&nbsp;
+          <code className="language-typescript">M</code>
+        </p>
+        <div className="row row-cols-1 row-cols-md-3">
+          <div className="col">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>Symbol</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>I</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>V</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>X</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>L</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>C</td>
+                  <td>100</td>
+                </tr>
+                <tr>
+                  <td>D</td>
+                  <td>500</td>
+                </tr>
+                <tr>
+                  <td>M</td>
+                  <td>1000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="col col-md-2">
+            <pre>
+              input: s = "LVIII"
+              <br />
+              Output: 58
+              <br />
+              Explanation: L = 50, V = 5, III = 3
+            </pre>
+            <pre>
+              input: s = "MCMXCIV"
+              <br />
+              Output: 1994
+              <br />
+              Explanation: M = 1000, CM = 900, XC = 90, IV = 4
+            </pre>
+          </div>
+        </div>
+        <ul>
+          <li>I can be placed before V (5) and X (10) to make 4 and 9.</li>
+          <li>X can be placed before L (50) and C (100) to make 40 and 90.</li>
+          <li>
+            C can be placed before D (500) and M (1000) to make 400 and 900.
+          </li>
+        </ul>
       </SectionHeader>
       <SectionSolution code={code} />
       <SectionTesting arrGlobal={["romanToInt"]} />
