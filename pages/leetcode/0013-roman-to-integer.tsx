@@ -29,7 +29,7 @@ const RomanToInteger: NextPage<Props> = ({ code }) => {
       </Head>
       <SectionHeader heading="Question">
         <p className="lead text-uppercase">0013 - roman to integer</p>
-        <p className="">
+        <p className="mb-4">
           Roman numerals are represented by seven different symbols:
           <br />
           <code className="language-typescript">I</code>&nbsp;&nbsp;
@@ -82,20 +82,29 @@ const RomanToInteger: NextPage<Props> = ({ code }) => {
             </table>
           </div>
           <div className="col col-md-2">
-            <pre>
-              input: s = "LVIII"
-              <br />
-              Output: 58
-              <br />
-              Explanation: L = 50, V = 5, III = 3
-            </pre>
-            <pre>
-              input: s = "MCMXCIV"
-              <br />
-              Output: 1994
-              <br />
-              Explanation: M = 1000, CM = 900, XC = 90, IV = 4
-            </pre>
+            <div className="py-1 px-2">
+              <pre className="mb-4">
+                input: s = "III"
+                <br />
+                Output: 3
+                <br />
+                Expl: III = 3
+              </pre>
+              <pre className="mb-4">
+                input: s = "LVIII"
+                <br />
+                Output: 58
+                <br />
+                Expl: L = 50, V = 5, III = 3
+              </pre>
+              <pre>
+                input: s = "MCMXCIV"
+                <br />
+                Output: 1994
+                <br />
+                Expl: M = 1000, CM = 900, XC = 90, IV = 4
+              </pre>
+            </div>
           </div>
         </div>
         <ul>
