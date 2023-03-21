@@ -1,4 +1,4 @@
-const isValid = (s: string): boolean => {
+export default function isValid(s: string): boolean {
   console.log("s: ", s);
   // ============================================================================
   // 1. Handle edge cases
@@ -170,6 +170,4 @@ const isValid = (s: string): boolean => {
       return true;
     }
   }
-};
-
-export default isValid;
+}
